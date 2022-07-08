@@ -25,10 +25,8 @@ function selectionSort(arr) {
     const sortArr = []
     for (let i = 0; i < arr.length; i++) {
         let smallestIndex = findSmallest(arr)
-        console.log(smallestIndex)
         sortArr.push(arr.pop(smallestIndex))
     }
-
     return sortArr
 }
 
