@@ -19,13 +19,14 @@ function findSmallest(arr) {
 }
 
 // Сортировка
-// Не работает!!
 
 function selectionSort(arr) {
     const sortArr = []
-    for (let i = 0; i < arr.length; i++) {
+    const l = arr.length
+    for (let i = 0; i < l; i++) {
         let smallestIndex = findSmallest(arr)
-        sortArr.push(arr.pop(smallestIndex))
+        const tmp = arr.splice(smallestIndex, 1)
+        sortArr.push(tmp[0])
     }
     return sortArr
 }
